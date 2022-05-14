@@ -45,10 +45,6 @@ FriendList.propTypes = {
     }),
   ).isRequired,
 };
-FriendList.defaultProps = {
-  avatar: 'https://www.flaticon.com/svg/static/icons/svg/1623/1623681.svg',
-  name: 'User name',
-  isOnline: false,
-};
+
 
 export default FriendList;

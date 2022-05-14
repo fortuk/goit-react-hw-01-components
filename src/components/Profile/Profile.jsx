@@ -41,16 +41,5 @@ Profile.propTypes = {
   }),
 };
 
-Profile.defaultProps = {
-  name: 'User name',
-  tag: '@User tag',
-  location: 'User location',
-  avatar: 'https://www.flaticon.com/svg/static/icons/svg/3784/3784184.svg',
-  stats: {
-    followers: '0',
-    views: '0',
-    likes: '0',
-  },
-};
 
 export default Profile;

@@ -1,18 +1,18 @@
 import s from './Statistics.module.css';
 import PropTypes from 'prop-types';
 
-
+const randomColor = () => '#' + Math.floor(Math.random() * 16777215).toString(16)
 
 const Statistics = ({ title, stats }) => {
   return (
     <section className={s.statistics}>
       <h2 class={s.title}>{title}</h2>
       <ul class={s.statList}>
-        {stats.map(({ id, label, percentage, color }) => (
+        {stats.map(({ id, label, percentage }) => (
           <li
             key={id}
             class={s.item}
-            style={{ backgroundColor: color }}
+            style={{ backgroundColor: randomColor() }}
           >
             <span class={s.label}>{label}</span>
             <span class={s.percentage}>{percentage}%</span>
@@ -34,9 +34,5 @@ Statistics.propTypes = {
   ).isRequired,
 };
 
-Statistics.defaultProps = {
-  title: '',
-  label: 'format',
-};
 
 export default Statistics;
